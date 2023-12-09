@@ -1,0 +1,647 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-text-color: #17181c;
+    --secondary-text-color: #000000;
+    --nav-text-color: #a0a0a0;
+    --asset-color: #024aad;
+    --asset-dark-color: #0d0734;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+}
+
+/* reset css */
+h2 {
+    font-size: 45px;
+}
+
+h3 {
+    font-size: 20px;
+    color: var(--primary-text-color)
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+p {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+/* utility */
+.flex {
+    display: flex;
+}
+.icon{
+    display: none;
+}
+.flex-colum {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    justify-content: space-between;
+    padding: 15px 0px;
+    position: relative;
+
+    align-items: center;
+}
+
+.header::before {
+    content: "";
+    width: 100px;
+    height: 4px;
+    background: var(--asset-color);
+    border-radius: 50px 0 0 50px;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1110px;
+    /* border: 1px solid red; */
+    margin: auto;
+}
+
+/* Navbar */
+.nav-links {
+    flex-basis: 54%;
+    margin-right: 30px;
+}
+
+.nav-links ul {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hover-link {
+    position: relative;
+}
+
+.hover-link a {
+    transition: 1s ease-in-out all;
+    color: var(--nav-text-color);
+}
+
+.hover-link a:hover {
+    color: var(--asset-color);
+}
+
+.hover-link::before {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: var(--asset-color);
+    border-radius: 50px 0 0 50px;
+    position: absolute;
+    left: 10%;
+    bottom: -6px;
+    transition: 1s all;
+
+}
+
+a:hover {
+    color: var(--asset-color) !important;
+}
+
+.hover-link:hover::before {
+    content: "";
+    width: 80%;
+    height: 2px;
+    background: var(--asset-color);
+    border-radius: 50px 0 0 50px;
+    position: absolute;
+    left: 10%;
+    bottom: -6px;
+}
+
+/* herosection */
+.hero-section {
+    display: flex;
+    gap: 10px;
+    padding: 33px 0 24px;
+}
+
+.hero-section-left {
+    flex-basis: 50%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 20px 20px 20px;
+    line-height: 1.2;
+}
+
+.hero-section-left h1 {
+    font-size: 45px;
+}
+
+.hero-section p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.primary-button {
+    background-color: var(--asset-color);
+    color: white;
+    font-size: 12px;
+    border: none;
+    border-radius: 50px;
+    display: inline-block;
+    padding: 17px 50px 17px;
+    font-size: 15px;
+}
+
+.primary-button:hover {
+    background-color: var(--asset-dark-color);
+}
+
+.hero-section-right {
+    /* padding: 20px; */
+    margin: 0 0 0 -125px;
+    flex-basis: 60%;
+}
+
+.down-arrow {
+    position: relative;
+    top: 100px;
+}
+
+.blue-text {
+    font-style: oblique;
+    color: var(--asset-color);
+    font-weight: 400;
+}
+
+.hero-section-right img {
+
+    width: 100%;
+}
+
+/* details-section */
+.details-section {
+    padding: 41px 57px 50px 35px;
+    border-radius: 7px;
+    background-color: var(--asset-color);
+    color: white;
+    gap: 20px;
+}
+
+.details-section-left {
+    gap: 40px;
+}
+
+.details-section-left p {
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+.details-section-left h2 {
+    font-size: 34px;
+    font-weight: 300;
+}
+
+.details-section-left {
+    flex-basis: 58%;
+}
+
+.details-section-right {
+    justify-content: space-between;
+    gap: 40px;
+    flex-basis: 50%;
+}
+
+.black-img-back {
+    width: 38px;
+    background: #0d0734;
+    padding: 5px;
+    border-radius: 40px;
+}
+
+.small-card {
+    align-items: center;
+    border-radius: 10px;
+    padding: 20px;
+    gap: 20px;
+    justify-content: space-around;
+    height: 98px;
+    color: black;
+    max-width: 267px;
+    background-color: white;
+}
+
+.small-card-right {
+    align-self: flex-end;
+}
+
+.big-feature {
+    gap: 20px;
+    padding: 100px 0px;
+
+}
+
+.big-feature-right h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.big-feature-left {
+
+    flex-basis: 33%;
+}
+
+.big-feature-left img {
+    max-width: 100%;
+}
+
+.big-feature-right {
+    flex-basis: 66%;
+    max-width: 66%;
+    justify-content: center;
+    gap: 20px;
+}
+
+.big-feature-right p {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.flex-reverse {
+    flex-direction: row-reverse;
+}
+
+.card-details {
+    justify-content: space-around;
+    gap: 60px;
+}
+
+.cards-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* gap: 30px; */
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 100%;
+    margin: 0;
+    padding: 45px 30px 40px;
+    height: 100%;
+    background: #fff;
+    transition: all .4s ease-in-out;
+    border-radius: 10px;
+}
+
+.card:hover {
+    background-color: var(--asset-color);
+    color: white !important;
+}
+
+.card:hover h3 {
+    transition: all .4s ease-in-out;
+}
+
+.card:hover h3,
+svg {
+    color: white !important;
+}
+
+.card-section-header h2 {
+    font-size: 36px;
+}
+
+.card-details h3 {
+    font-size: 18px;
+}
+
+.card-details p {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+/* blockchain */
+.header-blockchain-dev h2 {
+    font-size: 36px;
+    font-weight: bolder !important;
+}
+
+.blockchain-dev h3 {
+    font-weight: bolder !important;
+    font-size: 18px;
+}
+
+.header-blockchain-dev {
+    gap: 13px;
+}
+
+.blockchain-dev {
+    padding: 10% 20px;
+    gap: 38px;
+}
+
+.blockchain-dev p {
+    font-size: 15px;
+    list-style: 26px;
+}
+
+.blockchain-details {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.blockchain-card {
+    max-width: 46%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.get-analyst-background {
+    background-color: var(--asset-dark-color);
+    color: white;
+}
+
+.get-analyst {
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.get-analyst-left {
+    gap: 20px;
+    flex-basis: 66%;
+}
+
+.get-analyst-right {
+    flex-basis: 33%;
+}
+
+.get-analyst-right img {
+    width: 100%;
+}
+
+.get-analyst-left h2 {
+    font-size: 28px;
+}
+
+.get-analyst-left p {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.get-analyst-btn {
+    width: 40%;
+    background-color: var(--asset-color);
+    color: white;
+    font-size: 12px;
+    border: none;
+    border-radius: 50px;
+    display: inline-block;
+    padding: 17px 50px 17px;
+    font-size: 15px;
+    transition: 0.4s all ease-in-out;
+}
+
+.get-analyst-btn:hover {
+    background-color: white;
+    color: var(--asset-dark-color);
+}
+
+.Ethereum-section {
+    padding-block: 100px;
+    display: grid;
+    row-gap: 20px;
+    column-gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    border-bottom: 1px solid grey;
+}
+
+.Ethereum-section-left-up {
+    gap: 20px;
+}
+
+.Ethereum-section h2 {
+    font-size: 36px;
+}
+
+.Ethereum-section h3 {
+    font-size: 18px;
+}
+
+.Ethereum-section p {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.Ethereum-section-right-up {
+    align-self: flex-start;
+}
+
+.Ethereum-section-right-up img {
+    max-width: 100%;
+
+}
+
+.pointer-event-disable {
+    pointer-events: none;
+    padding: 0px;
+}
+
+.form-section {
+    padding-block: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 16px;
+}
+
+.form-section-left {
+    font-size: 16px;
+    line-height: 28px;
+    gap: 20px;
+    color: #17181c;
+}
+
+.form-left-firstpara {
+    color: #17181c;
+    font-style: italic;
+}
+
+.form-left-secondpara {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.form-section-right {
+    background: url(./assets/asset\ 26.svg);
+    width: 100%;
+    max-width: 470 px;
+    padding: 57px 40px 115px;
+    margin: 20px 0 0;
+    border-radius: 12px;
+    gap: 24px;
+    color: white;
+}
+
+.form-section-right input {
+    padding: 10px;
+    font-size: 20px;
+    outline: none;
+}
+
+.form-submit {
+    margin-top: 20px;
+    width: 40%;
+    background-color: white;
+    color: var(--asset-color);
+    font-size: 12px;
+    border: none;
+    border-radius: 50px;
+    display: inline-block;
+    padding: 17px 50px 17px;
+    font-size: 15px;
+}
+
+.email-section-background {
+    background-color: #024AAD;
+}
+
+.email-section-left {
+    flex-basis: 60%;
+}
+
+
+.email-section-left p {
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.email-section-left h2 {
+    font-size: 36px;
+}
+
+.email-section-left {
+    gap: 20px;
+}
+
+.email-section-right {
+    flex-basis: 40%;
+    ;
+}
+
+.email-section {
+    color: white;
+    padding: 100px 30px;
+    gap: 20px;
+    align-items: center;
+}
+
+.email-input {
+    height: 50px;
+}
+
+.email-input input:focus {
+    outline: none;
+    border: none;
+}
+
+.email-input input {
+    width: 60%;
+    color: black;
+    font-size: 14px;
+    height: 100%;
+}
+
+.email-btn {
+
+    height: 100%;
+    margin-left: -10px;
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 15px 10px;
+}
+
+.social_info {
+    gap: 10px;
+}
+
+.subh-footer-background {
+    background-color: var(--secondary-text-color);
+    color: white;
+}
+
+.subh-footer {
+    padding-block: 100px;
+    display: grid;
+    gap: 20px;
+    justify-content: space-between;
+    grid-template-columns: 1.5fr 1fr 2fr;
+    color: var(--nav-text-color);
+}
+
+.subh-footer p {
+    font-size: 15px;
+}
+
+.subh-footer li {
+    font-size: 14px;
+}
+
+.col-2 {
+    gap: 20px;
+}
+
+.col-2 h4 {
+    font-size: 20px;
+}
+
+.col-2 ul,
+.col-3 ul,
+.col-1 {
+    gap: 10px;
+}
+
+.col-2 h4 {
+    color: white;
+}
+
+
+.end-footer {
+    width: 100%;
+    max-width: 1170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #202126;
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    color: #a0a0a0;
+}
+
+.end-footer p {
+    padding: 10px;
+}
