@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Website</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            transition:  all ease-in-out 1x;
+        }
+    </style>
+</head>
+
+<body class=" box-border overflow-x-hidden text-[#183b56]">
+    <!-- navbar -->
+    <header class="bg-[#f3faff]  sticky top-0 z-10">
+        <nav
+            class="text-white max-w-[1180px] m-auto w-screen px-3 md:px-8 max-h-16 h-16 justify-between flex items-center  backdrop-blur  transition-colors duration-500">
+        
+            <img src="news.png" class="h-11" alt="">
+            <div class="wrapper flex gap-4 items-center">
+                <div class=" overflow-hidden  text-sm flex justify-start rounded-md max-w-[200px] ">
+                    
+                    <input type="text"
+                        class="border-slate-950 py-2 px-2 border-none w-full focus:outline-none text-black  border-r-0 rounded-l-md shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)]"
+                        id="search-text" placeholder="Search">
+                    <button
+                        class="px-3 transition ease-linear hover:bg-[#1d69a3] bg-[#2294ed] shadow-[0_8px_30px_rgb(0,0,0,0.12)] " id="searchBtn"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-search" viewBox="0 0 16 16" >
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                        </svg></button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div
+        class="card-section max-w-[1180px] w border-red-800  w-full m-auto grid min-[900px]:grid-cols-3 max-[447px]:grid-cols-1 grid-cols-2 mt-3 px:3 md:px-8 justify-evenly place-items-center place-content-center gap-y-5 
+        max-[992px]:gap-4 transition-2 transition-all ease-in-out" id="card-section">
+    </div>
+
+    <template class="template-news-card" id="template-news-card">
+        <div id="card-uniq"
+            class="card min-[992px]:max-w-[300px] max-[992px]:max-w-[380px] min-h-[400px] bg-white flex flex-col gap-2 rounded-sm p-[10px] shadow-[0px_0px_4px_0px_#d4ecff] hover:shadow-[1px_1px_8px_0px_#d4ecff] hover:translate-y-[-2px]   transition-2 transition-all ease-in-out shadow-white overflow-hidden ">
+            <div class="card-header">
+                <div class="">
+                    <img src="https://via.placeholder.com/400x200" class=" object-cover min-[820px]:max-h-[180px] min-[820px]:w-[380px]" alt="news-img" id="news-img">
+                </div>
+            </div>
+            <div class="card-content">
+                <h3 class="font-bold text-[20px] cursor-pointer" id="news-title"></h3>
+                <h6 class="text-[11px] " id="news-source">End Gadget 26/08/2024</h6>
+                <p id="news-desc"
+                    class="news-desc leading-5 mt-2 text-[13px] text-slate-800 text-justify">new
+                    description Lorem ipsum dolor sit, amet
+                    consectetur adipisicing elit. Doloribus
+                    obcaecati adipisci molestias enim earum corporis ab exercitationem quis quos vero!</p>
+            </div>
+        </div>
+    </template>
+</body>
+<script src="script.js"></script>
+
+</html>
